@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Formulir Tambah Data</title>
+</head>
+<body>
+
+	<h1 align="center">Tambah Data Surat Keluar</h1>
+
+	<form th:action="@{/tambah-data}" method="post" th:object="${klr}">
+		<table align="center">
+			<tr>
+				<td>ID</td>
+				<td><input type="text" th:field="*{id}" /> </td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td>TANGGAL SURAT</td>
+				<td><input type="text" th:field="*{tgl_surat}" /> </td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td>JUDUL</td>
+				<td><input type="text" th:field="*{judul}" /></td>
+				<td></td>
+			</tr>
+                        
+                        <tr>
+				<td>TUJUAN</td>
+				<td><input type="text" th:field="*{tujuan}" /></td>
+				<td></td>
+			</tr>
+
+			<tr>
+
+				<td></td>
+				<td>
+					<button type="submit">Simpan</button>
+				</td>
+
+			</tr>
+		</table>
+
+	</form>
+
+</body>
+</html>
